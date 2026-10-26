@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TravelGear | Đặt hàng mẫu</title>
+</head>
+<body bgcolor="#F7FAFF">
+  <table bgcolor="#123A69" border="0" cellpadding="15" cellspacing="0" width="100%">
+    <tr>
+      <td align="center">
+        <font color="#FFFFFF" size="7"><b>◆ TRAVELGEAR STORE</b></font><br/>
+        <font color="#FCD584" size="4">CARRY YOUR JOURNEY · CONFIDENT EVERY STEP</font><br/>
+        <font color="#FFFFFF" size="2">Cửa hàng balo & phụ kiện mẫu | HTML ONLY</font>
+      </td>
+    </tr>
+  </table>
+
+  <!-- MENU ĐIỀU HƯỚNG 5 TRANG -->
+  <table bgcolor="#DCEAF9" border="0" cellpadding="12" cellspacing="0" width="100%">
+    <tr>
+      <td align="center">
+        <nav aria-label="Điều hướng chính">
+          <a href="index.html">⌂ Trang chủ</a> |
+          <a href="index.html#san-pham">◈ Sản phẩm</a> |
+          <a href="chi-tiet.html">▤ Chi tiết</a> |
+          <a href="bang-gia.html">▦ Bảng tổng hợp</a> |
+          <a href="dat-hang.html">✉ Đặt hàng mẫu</a>
+        </nav>
+      </td>
+    </tr>
+  </table>
+
+  <main>
+    <h1 align="center">FORM ĐẶT HÀNG MẪU (STATIC)</h1>
+    
+    <table border="0" cellpadding="20" width="80%" align="center">
+      <tr>
+        <td bgcolor="#FFFFFF">
+          <form action="xac-nhan.html" method="get">
+            
+            <!-- THÔNG TIN NGƯỜI ĐẶT -->
+            <fieldset>
+              <legend><strong>Thông tin người đặt</strong></legend>
+              <p>
+                <label for="ten">Họ tên *</label><br/>
+                <input autocomplete="name" id="ten" maxlength="60" minlength="2" name="hoTen" placeholder="Nguyen Van A" required="" type="text" size="40"/>
+              </p>
+              <p>
+                <label for="email">Email *</label><br/>
+                <input autocomplete="email" id="email" name="email" placeholder="demo@example.com" required="" type="email" size="40"/>
+              </p>
+              <p>
+                <label for="phone">Điện thoại (chỉ nhập số giả lập)</label><br/>
+                <input id="phone" name="phone" placeholder="0900000000" type="tel" size="40"/>
+              </p>
+            </fieldset>
+            
+            <br/>
+
+            <fieldset>
+              <legend><strong>Chi tiết sản phẩm</strong></legend>
+              <p>
+                <label for="product">Mẫu sản phẩm *</label><br/>
+                <select id="product" name="maSanPham" required="">
+                  <option value="">-- Chọn sản phẩm --</option>
+                  <option value="TG01">TG01 - Balo Laptop Urban Black (650.000 đ)</option>
+                  <option value="TG02">TG02 - Balo Du Lịch Trekker Pro (990.000 đ)</option>
+                  <option value="TG03">TG03 - Túi Chống Sốc Premium (280.000 đ)</option>
+                  <option value="TG04">TG04 - Túi Đeo Chéo Compact (380.000 đ)</option>
+                  <option value="TG05">TG05 - Vali Du Lịch Freedom 20" (1.490.000 đ)</option>
+                  <option value="TG06">TG06 - Túi Organizer Cáp Sạc (190.000 đ)</option>
+                  <option value="TG07">TG07 - Balo Khóa TSA Anti-Theft (790.000 đ)</option>
+                  <option value="TG08">TG08 - Túi Gấp Gọn Travel Roll (220.000 đ)</option>
+                  <option value="TG09">TG09 - Bao Chống Nước Balo (110.000 đ)</option>
+                  <option value="TG10">TG10 - Balo Camera Travel Lens (1.250.000 đ)</option>
+                </select>
+              </p>
+
+              <p>
+                <label for="size">Phiên bản / Kích thước *</label><br/>
+                <select id="size" name="size" required="">
+                  <option value="">-- Chọn phiên bản --</option>
+                  <option value="Standard">Tiêu chuẩn (Standard)</option>
+                  <option value="Large">Cỡ lớn (Large / 40L)</option>
+                  <option value="Compact">Cỡ nhỏ (Compact)</option>
+                </select>
+              </p>
+
+              <p>
+                <label for="quantity">Số lượng (1-5)</label><br/>
+                <input id="quantity" max="5" min="1" name="soLuong" required="" step="1" type="number" value="1"/>
+              </p>
+
+              <fieldset>
+                <legend>Hình thức nhận hàng</legend>
+                <label><input name="giaoHang" required="" type="radio" value="tai-cua-hang"/> Nhận tại cửa hàng</label><br/>
+                <label><input name="giaoHang" type="radio" value="giao-tan-noi"/> Giao tận nơi</label>
+              </fieldset>
+
+              <p>
+                <label for="note">Ghi chú</label><br/>
+                <textarea cols="40" id="note" maxlength="300" name="ghiChu" placeholder="Ghi chú đơn hàng (không bắt buộc)" rows="4"></textarea>
+              </p>
+            </fieldset>
+
+            <br/>
+
+            <!-- XÁC NHẬN VÀ NÚT GỬI -->
+            <p>
+              <label><input name="dongY" required="" type="checkbox" value="yes"/> Tôi hiểu đây chỉ là form thực hành, không tạo đơn hàng thật *</label>
+            </p>
+            
+            <p>
+              <button type="submit">Gửi yêu cầu mẫu</button>
+              <button type="reset">Nhập lại</button>
+            </p>
+
+          </form>
+        </td>
+      </tr>
+    </table>
+  </main>
+
+  <br/>
+  <!-- FOOTER DÙNG CHUNG -->
+  <table bgcolor="#123A69" border="0" cellpadding="16" cellspacing="0" width="100%">
+    <tr>
+      <td align="center">
+        <font color="white"><b>◆ TRAVELGEAR STORE</b> · 10 sản phẩm demo · © 2026</font><br/>
+        <font color="#FFDC91">Dữ liệu, giá bán và đơn hàng đều mang tính minh họa phục vụ học tập.</font><br/>
+        <a href="index.html"><font color="#FFFFFF">↥ Quay lại trang chủ</font></a>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
